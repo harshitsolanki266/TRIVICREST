@@ -76,30 +76,30 @@
   </section>
 
   <section class="soft">
-    <div class="wrap split">
-      <div>
-        <h2>Send an enquiry</h2>
-        <p class="lead" style="margin-bottom:0">Fill this in and send it to us on WhatsApp. We will reply with details on price, minimum quantity and timelines.</p>
-      </div>
-      <div>
-        <label for="company">Company name</label>
-        <input id="company" placeholder="e.g. Abc Corp">
-        <label for="country">Country</label>
-        <input id="country" placeholder="e.g. United States">
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="e.g. name@company.com">
-        <label for="pl-brand">Brand name</label>
-        <input id="pl-brand" placeholder="e.g. Golden Harvest.">
-        <label for="pl-spices">spice and food product</label>
-        <input id="pl-spices" placeholder="e.g. Turmeric, garam masala">
-        <label for="pl-pack">Pack size and quantity</label>
-        <input id="pl-pack" placeholder="e.g. 1 kg bags, 2 tonnes.">
-        <label for="pl-note">Note</label>
-        <textarea id="pl-note" rows="3"></textarea>
-        <button class="btn" id="pl-send" type="button">Send on WhatsApp</button>
-      </div>
+  <div class="wrap split">
+    <div>
+      <h2>Send an enquiry</h2>
+      <p class="lead" style="margin-bottom:0">Fill this in and send it to us on WhatsApp. We will reply with details on price, minimum quantity and timelines.</p>
     </div>
-  </section>
+    <div>
+      <label for="company">Company name</label>
+      <input id="company" placeholder="e.g. Abc Corp">
+      <label for="country">Country</label>
+      <input id="country" placeholder="e.g. United States">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="e.g. name@company.com">
+      <label for="pl-brand">Brand name</label>
+      <input id="pl-brand" placeholder="e.g. Golden Harvest">
+      <label for="pl-spices">Spice and food product</label>
+      <input id="pl-spices" placeholder="e.g. Turmeric, garam masala">
+      <label for="pl-pack">Pack size and quantity</label>
+      <input id="pl-pack" placeholder="e.g. 1 kg bags, 2 tonnes">
+      <label for="pl-note">Note</label>
+      <textarea id="pl-note" rows="3"></textarea>
+      <button class="btn" id="pl-send" type="button">Send on WhatsApp</button>
+    </div>
+  </div>
+</section>
 
   <section class="cta">
     <div class="wrap">
@@ -129,15 +129,23 @@
 <script>
 // Uses the PHONE number set at the top of script.js
 document.getElementById("pl-send").onclick = function () {
-  var v = function (id) { return document.getElementById(id).value.trim() || "-"; };
-  var m = "Hello, I am interested in private labeling.\n" +
-          "Name: " + v("pl-name") + "\n" +
-          "Brand: " + v("pl-brand") + "\n" +
-          "Spices: " + v("pl-spices") + "\n" +
-          "Pack size and quantity: " + v("pl-pack") + "\n" +
-          "Note: " + v("pl-note");
-  window.open("https://wa.me/" + (/^\d{10,15}$/.test(PHONE) ? PHONE : "") + "?text=" + encodeURIComponent(m), "_blank", "noopener");
-};
+    var v = function (id) { 
+      var el = document.getElementById(id);
+      return (el && el.value.trim()) ? el.value.trim() : "-"; 
+    };
+
+    var m = "Hello, I am interested in private labeling.\n" +
+            "Company: " + v("company") + "\n" +
+            "Country: " + v("country") + "\n" +
+            "Email: " + v("email") + "\n" +
+            "Brand: " + v("pl-brand") + "\n" +
+            "Spices: " + v("pl-spices") + "\n" +
+            "Pack size and quantity: " + v("pl-pack") + "\n" +
+            "Note: " + v("pl-note");
+
+    var phoneNum = (typeof PHONE !== "undefined" && /^\d{10,15}$/.test(PHONE)) ? PHONE : "";
+    window.open("https://wa.me/" + phoneNum + "?text=" + encodeURIComponent(m), "_blank", "noopener");
+  };
 </script>
 </body>
 </html>
