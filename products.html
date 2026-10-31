@@ -8,14 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <div class="wrap">
       <a class="logo" href="index.html">
-      <img src="images/trivilogo.png" alt="Trivicrest International LLP" class="logo-img">
+        <img src="images/trivilogo.png" alt="Trivicrest International LLP" class="logo-img">
       </a>
       <nav>
         <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
+        <a href="products.html" class="active">Products</a>
         <a href="private-labeling.html">Private Labeling</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -24,20 +25,20 @@
   </header>
 
   <main>
-    <div class="page-head" style="background-color: #123a2b; color: #ffffff;">
+    <div class="page-head" style="background-color: #123a2b; color: #ffffff; padding: 40px 0;">
       <div class="wrap">
-        <h1>Our spices</h1>
-        <p>Pick a category, then order what you need on WhatsApp.</p>
+        <h1 style="color: #ffffff; margin-bottom: 8px;">Our spices</h1>
+        <p style="color: #e0e0e0; margin: 0;">Pick a category, then order what you need on WhatsApp.</p>
       </div>
     </div>
 
-    <section>
+    <section class="products-section">
       <div class="wrap">
-        <div class="filters">
-          <button>All</button>
-          <button>Whole</button>
-          <button>Ground</button>
-          <button>Blend</button>
+        <div class="filters" role="tablist">
+          <button type="button" class="active">All</button>
+          <button type="button">Whole</button>
+          <button type="button">Ground</button>
+          <button type="button">Blend</button>
         </div>
         <div class="grid" id="grid"></div>
       </div>
