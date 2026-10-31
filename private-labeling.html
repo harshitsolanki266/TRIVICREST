@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Private Labeling | Trivicrest</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Playfair+Display:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <img src="images/logoo.png" alt="Trivicrest International LLP" class="logo-img">
+      </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="private-labeling.html">Private Labeling</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <div class="wrap">
+      <h1>Private labeling</h1>
+      <p>Sell our product under your own brand. We clean, blend, pack and label. You focus on selling.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <h2>Your brand, Our product</h2>
+        <p>If you’re an importer, distributor, retailer or food brand, you can sell our spices and food product under your own name and label. We handle the sourcing, cleaning, grinding and packing, so your customers get consistent quality every time.</p>
+        <p>Tell us what you want to sell and how you want it packed. We will suggest the best way to get there.</p>
+      </div>
+      <div>
+        <h2>What you can choose</h2><br>
+        <div class="cols" style="gap:18px">
+          <div><strong>Your product</strong><span>Whole spices, ground spices, masala blends and selected food products from our range.</span></div>
+          <div><strong>Your pack size</strong><span>Small retail packs or larger bulk packs.</span></div>
+          <div><strong>Your label</strong><span>Your brand name, logo and artwork on every pack.</span></div>
+          <div><strong>Your blend</strong><span>Ask for a custom masala made to your taste.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="lead">From first message to finished packs in four steps.</p>
+      <div class="cols">
+        <div><strong>1. Tell us your plan</strong><span>Share the spices, pack sizes and quantity you need.</span></div>
+        <div><strong>2. Approve a sample</strong><span>We prepare a sample so you can check colour, aroma and taste.</span></div>
+        <div><strong>3. Finalise the label</strong><span>Send your artwork. We confirm the pack and label details.</span></div>
+        <div><strong>4. We pack and deliver</strong><span>Your branded packs are sealed, packed for export and shipped to your port</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Why work with us</h2><br>
+      <div class="cols">
+        <div><strong>Clean and sorted</strong><span>Every lot is cleaned and graded before it is packed.</span></div>
+        <div><strong>Consistent quality</strong><span>Small-batch grinding keeps colour and aroma steady, order after order.</span></div>
+        <div><strong>Flexible orders</strong><span>Start small, then grow as your brand grows.</span></div>
+        <div><strong>Direct contact</strong><span>Talk to us directly on WhatsApp or email. Quick replies, clear answers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap split">
+      <div>
+        <h2>Send an enquiry</h2>
+        <p class="lead" style="margin-bottom:0">Fill this in and send it to us on WhatsApp. We will reply with details on price, minimum quantity and timelines.</p>
+      </div>
+      <div>
+        <label for="company">Company name</label>
+        <input id="company" placeholder="e.g. Abc Corp">
+        <label for="country">Country</label>
+        <input id="country" placeholder="e.g. United States">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="e.g. name@company.com">
+        <label for="pl-brand">Brand name</label>
+        <input id="pl-brand" placeholder="e.g. Golden Harvest.">
+        <label for="pl-spices">spice and food product</label>
+        <input id="pl-spices" placeholder="e.g. Turmeric, garam masala">
+        <label for="pl-pack">Pack size and quantity</label>
+        <input id="pl-pack" placeholder="e.g. 1 kg bags, 2 tonnes.">
+        <label for="pl-note">Note</label>
+        <textarea id="pl-note" rows="3"></textarea>
+        <button class="btn" id="pl-send" type="button">Send on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Ready to launch your own spice brand?</h2>
+      <p>Tell us what you have in mind. We will help you take it from idea to shelf.</p>
+      <a class="btn" href="contact.html">Contact us</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span class="yr"></span> Trivicrest International LLP. All rights reserved. | <a href="mailto:info@trivicrest.com">info@trivicrest.com</a></span>
+    <span>
+      <a href="products.html">Products</a>
+      <a href="private-labeling.html">Private Labeling</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
+<script src="script.js"></script>
+<script>
+// Uses the PHONE number set at the top of script.js
+document.getElementById("pl-send").onclick = function () {
+  var v = function (id) { return document.getElementById(id).value.trim() || "-"; };
+  var m = "Hello, I am interested in private labeling.\n" +
+          "Name: " + v("pl-name") + "\n" +
+          "Brand: " + v("pl-brand") + "\n" +
+          "Spices: " + v("pl-spices") + "\n" +
+          "Pack size and quantity: " + v("pl-pack") + "\n" +
+          "Note: " + v("pl-note");
+  window.open("https://wa.me/" + (/^\d{10,15}$/.test(PHONE) ? PHONE : "") + "?text=" + encodeURIComponent(m), "_blank", "noopener");
+};
+</script>
+</body>
+</html>

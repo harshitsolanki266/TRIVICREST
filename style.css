@@ -1,0 +1,320 @@
+:root{--bg:#FFFFFF;--soft:#F5F1EA;--ink:#241512;--mute:#6B5F59;--line:#E4DDD3;--red:#5A1A12;--gold:#E3A008;--green:#3F5B3A}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3,.logo{font-family:Fraunces,Georgia,serif;line-height:1.1;letter-spacing:-.01em}
+a{color:inherit}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+/* Header Container */
+/* Base Header Styling (For Light Subpages: Products, About, Contact, etc.) */
+header {
+  position: sticky;
+  top: 0;
+  background: #0b2d1f; /* Solid brand green for subpages to make logo and nav crisp */
+  z-index: 10;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(224, 196, 122, 0.2);
+}
+
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo-img {
+  height: 65px;
+  width: auto;
+  display: block;
+}
+
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #E0C47A;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+nav a:hover, nav a.on {
+  color: #ffffff;
+  border-bottom: 2px solid #E0C47A;
+}
+
+/* Homepage-Only Dissolving Header over Video */
+body.home-page header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to bottom, 
+    #0b2d1f 0%, 
+    #0b2d1f 35%, 
+    rgba(11, 45, 31, 0.75) 70%, 
+    rgba(11, 45, 31, 0) 100%
+  );
+  border-bottom: none;
+  padding: 15px 0 45px;
+}
+
+/* Hero Section Spacing for Large Logo */
+.hero {
+  position: relative;
+  min-height: 600px;
+  padding: 220px 0 120px; /* Extra top padding so headline doesn't touch logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+  
+/* Video Hero Banner */
+.hero {
+  position: relative;
+  min-height: 500px;
+  padding: 120px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* Dark tint overlay */
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 72px);
+  margin: 0 auto 18px;
+  max-width: 13ch;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero p {
+  max-width: 48ch;
+  font-size: 19px;
+  opacity: .95;
+  margin: 0 auto 28px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Page Header Section (Subpages) */
+.page-head {
+  background: var(--soft);
+  padding: 130px 0 48px; /* 130px top padding pushes text safely below the header gradient */
+  border-bottom: 1px solid var(--line);
+}
+.page-head h1{font-size:clamp(34px,5vw,52px);margin:0 0 8px}.page-head p{margin:0;color:var(--mute);max-width:52ch}
+.btn{display:inline-block;background:var(--gold);color:#241512;padding:13px 24px; border-radius:4px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.btn.alt{background:transparent;color:#fff;border:2px solid #fff;margin-left:10px}
+section{padding:60px 0}.soft{background:var(--soft)}
+h2{font-size:clamp(28px,4vw,40px);margin:0 0 10px}.lead{color:var(--mute);max-width:56ch;margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:6px;padding:20px;background:#fff}
+.card h3{margin:14px 0 4px;font-size:21px}.card p{margin:0;color:var(--mute);font-size:15px}
+.dot{width:84px;height:84px;border-radius:50%;box-shadow:inset 0 -8px 0 rgba(0,0,0,.18),inset 0 6px 0 rgba(255,255,255,.18)}
+.tag{display:inline-block;font-size:13px;color:var(--green);margin-top:10px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{border:1px solid var(--line);background:#fff;padding:9px 16px;border-radius:99px;font-size:15px;cursor:pointer}
+.filters button.on{background:var(--red);color:#fff;border-color:var(--red)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.cols strong{display:block;font-size:18px;margin-bottom:4px}.cols span,.about p{color:var(--mute)}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:4px;font:inherit;margin-bottom:16px}
+.cta{background:#162E21;color:#fff;text-align:center}.cta p{opacity:.9;margin:0 auto 22px;max-width:46ch}
+footer{background:#fff;color:#241512;padding:32px 0;font-size:14.5px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}footer a{margin-right:16px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* Styling for background image cards */
+.spice-card {
+  position: relative;
+  min-height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.spice-card h3 {
+  color: #ffffff !important;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.spice-card p {
+  color: #f0f0f0 !important;
+  font-size: 0.88rem;
+  margin-bottom: 12px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.spice-card .tag {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  color: #ffffff !important;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* "Rooted in origin" section */
+.rooted{position:relative;overflow:hidden;background:#162E21;color:#F6F1E6;padding:84px 0}
+.rooted::before,.rooted::after{content:"";position:absolute;border:1px solid rgba(224,196,122,.55);border-radius:50%;pointer-events:none}
+.rooted::before{width:420px;height:420px;top:-210px;right:-120px}
+.rooted::after{width:320px;height:320px;bottom:-190px;left:-110px}
+.rooted .wrap{position:relative;z-index:1}
+.rooted .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#E0C47A;margin:0 0 14px}
+.rooted h2{font-family:'Playfair Display',serif;font-size:42px;color:#fff;max-width:16ch;margin:0 0 18px}
+.rooted .intro{color:#D9D2BF;max-width:60ch;margin:0 0 30px}
+.regions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 54px}
+.regions span{border:1px solid #C9A24B;color:#E0C47A;border-radius:99px;padding:6px 16px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.rooted-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:36px;border-top:1px solid rgba(201,162,75,.5);padding-top:36px}
+.rooted-num{font-family:Fraunces,Georgia,serif;font-size:56px;font-weight:700;line-height:1;color:#C9A24B;margin:0 0 12px}
+.rooted-grid strong{display:block;font-size:19px;color:#fff;margin-bottom:6px}
+.rooted-grid .d{color:#D9D2BF;font-size:15.5px}
+
+
+
+/* ==========================================
+   MOBILE & TABLET RESPONSIVE STYLES
+   ========================================== */
+
+@media (max-width: 768px) {
+  
+  /* 1. Header & Navigation Adjustments */
+  header {
+    padding: 10px 0 25px !important;
+  }
+
+  header .wrap {
+    flex-direction: column; /* Stack logo and navigation vertically on small screens */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Shrink logo so it doesn't take up the whole phone screen */
+  .logo-img {
+    height: 48px !important; 
+  }
+
+  /* Center nav links and give them better touch targets */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px; /* Spacing between links */
+  }
+
+  nav a {
+    margin-left: 0 !important; /* Reset desktop left margin */
+    font-size: 14px !important;
+    padding: 4px 8px;
+  }
+
+  /* 2. Hero Section Fixes for Mobile Video */
+  .hero {
+    min-height: 480px !important;
+    padding: 150px 16px 60px !important; /* Extra top padding so logo/nav doesn't cover text */
+  }
+
+  .hero-content h1 {
+    font-size: 28px !important; /* Smaller title to prevent awkward text wrapping */
+    line-height: 1.25;
+  }
+
+  .hero-content p {
+    font-size: 15px !important;
+    margin-bottom: 20px;
+  }
+
+  /* Stack Hero Buttons on Mobile */
+  .hero-content .btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* 3. Subpage Headings Padding Fix */
+  .page-head {
+    padding: 150px 16px 36px !important; /* Prevents sticky header from overlapping page titles */
+    text-align: center;
+  }
+
+  .page-head h1 {
+    font-size: 32px !important;
+  }
+
+  /* 4. Product Grid & Section Columns */
+  .grid, .cols, .rooted-grid {
+    grid-template-columns: 1fr !important; /* Display items in a single full-width column */
+    gap: 20px !important;
+  }
+
+  section {
+    padding: 40px 16px !important; /* Reduce large section padding on small displays */
+  }
+
+  /* 5. Mobile Footer Styling */
+  footer .wrap {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  footer span {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
