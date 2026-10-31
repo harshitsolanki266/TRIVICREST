@@ -1,17 +1,18 @@
 // Set your WhatsApp number here: country code + number, digits only (e.g. 919876543210)
 var PHONE = "919887674410";
 var P = [
-  ["Turmeric powder", "Ground", "Deep colour, earthy and warm.", "turmeric(10).jpg"],
-  ["Red chilli powder", "Ground", "Bright heat for everyday cooking.", "Spicy Red Chili Flakes in Rustic Kitchen Setting.jpg"],
-  ["Coriander powder", "Ground", "Fresh, citrusy, a base for curries.", "Coriander Powder.jpg"],
-  ["Cumin seeds", "Whole", "Aromatic seeds for tempering.", "Cumin Seeds (Zeera).jpg"],
-  ["Black pepper", "Whole", "Sharp, bold heat from whole berries.", "black pepper.jpg"],
-  ["Green cardamom", "Whole", "Sweet, floral pods for tea and desserts.", "Cardamom Background _ Кардамон.jpg"],
-  ["Cloves", "Whole", "Strong and warming. A little goes far.", "clove (11).jpg"],
-  ["Garam masala", "Blend", "A balanced blend to finish a dish.", "garam masala.jpg"],
-  ["Chaat masala", "Blend", "Tangy blend for fruit, snacks and salads.", "Chaat Masala Recipe.jpg"],
-  ["Kitchen King masala", "Blend", "All-purpose blend for sabzi and gravies.", "download (9).jpg"]
+  ["Turmeric powder", "Ground", "Deep colour, earthy and warm.", "images/turmeric(10).jpg"],
+  ["Red chilli powder", "Ground", "Bright heat for everyday cooking.", "images/Spicy Red Chili Flakes in Rustic Kitchen Setting.jpg"],
+  ["Coriander powder", "Ground", "Fresh, citrusy, a base for curries.", "images/Coriander Powder.jpg"],
+  ["Cumin seeds", "Whole", "Aromatic seeds for tempering.", "images/Cumin Seeds (Zeera).jpg"],
+  ["Black pepper", "Whole", "Sharp, bold heat from whole berries.", "images/black pepper.jpg"],
+  ["Green cardamom", "Whole", "Sweet, floral pods for tea and desserts.", "images/Cardamom Background _ Кардамон.jpg"],
+  ["Cloves", "Whole", "Strong and warming. A little goes far.", "images/clove (11).jpg"],
+  ["Garam masala", "Blend", "A balanced blend to finish a dish.", "images/garam masala.jpg"],
+  ["Chaat masala", "Blend", "Tangy blend for fruit, snacks and salads.", "images/Chaat Masala Recipe.jpg"],
+  ["Kitchen King masala", "Blend", "All-purpose blend for sabzi and gravies.", "images/download (9).jpg"]
 ];
+
 var nav = location.pathname.split("/").pop() || "index.html";
 document.querySelectorAll("nav a").forEach(function (a) { if (a.getAttribute("href") === nav) a.className = "on"; });
 function card(p) {
