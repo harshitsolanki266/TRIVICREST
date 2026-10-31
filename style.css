@@ -8,7 +8,7 @@ a{color:inherit}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 header {
   position: sticky;
   top: 0;
-  background: #0b2d1f; /* Solid brand green for subpages to make logo and nav crisp */
+  background: #000000; /* Solid brand green for subpages to make logo and nav crisp */
   z-index: 10;
   padding: 12px 0;
   border-bottom: 1px solid rgba(224, 196, 122, 0.2);
