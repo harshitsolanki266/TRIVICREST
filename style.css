@@ -166,7 +166,7 @@ h2{font-size:clamp(28px,4vw,40px);margin:0 0 10px}.lead{color:var(--mute);max-wi
 label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
 input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:4px;font:inherit;margin-bottom:16px}
 .cta{background:#162E21;color:#fff;text-align:center}.cta p{opacity:.9;margin:0 auto 22px;max-width:46ch}
-footer{background:#123a2b;color:#241512;padding:32px 0;font-size:14.5px;border-top:1px solid var(--line)}
+footer{background:#123a2b;color:#fff;padding:32px 0;font-size:14.5px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}footer a{margin-right:16px}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
