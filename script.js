@@ -34,7 +34,7 @@ var P = [
   ["Bishop's weed (Ajwain)", "Seeds", "Thyme-like intensity, great for digestion and breads.", "images/ajwain.png"],
   ["Caraway", "Seeds", "Earthy, anise-flavored seeds for breads and stews.", "images/caraway.png"],
   ["Dill", "Seeds", "Pungent, tangy flavor for pickles and seafood.", "images/dill.png"],
-  ["Star Anise", "Whole", "Beautiful star-shaped pod with deep liquorice flavor.", "images/star anise.png"],
+  ["Star Anise", "Whole", "Beautiful star-shaped pod with deep liquorice flavor.", "images/star-anise.png"],
   ["Poppy Seed", "Seeds", "Nutty, tiny seeds for curries, gravies, and baking.", "images/poppy seed.png"],
   ["Juniper Berry", "Whole", "Piney, peppery berries for savory glazes.", "images/juniper berry.png"],
 
