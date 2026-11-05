@@ -3,8 +3,8 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 h1,h2,h3,.logo{font-family:Fraunces,Georgia,serif;line-height:1.1;letter-spacing:-.01em}
 a{color:inherit}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
 /* Header Container */
-/* Base Header Styling (For Light Subpages: Products, About, Contact, etc.) */
 header {
   position: sticky;
   top: 0;
@@ -28,7 +28,23 @@ header .wrap {
   display: block;
 }
 
-nav a {
+/* ==========================================
+   NAVIGATION & DROPDOWN STYLES
+   ========================================== */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0; 
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+nav a, .main-nav a {
   margin-left: 24px;
   text-decoration: none;
   color: #E0C47A;
@@ -39,11 +55,59 @@ nav a {
   padding: 6px 0;
   transition: color 0.2s ease;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  display: inline-block;
 }
 
-nav a:hover, nav a.on {
+nav a:hover, nav a.on, .main-nav a:hover, .main-nav a.on {
   color: #ffffff;
   border-bottom: 2px solid #E0C47A;
+}
+
+/* Dropdown Menu Styling */
+.main-nav .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 24px; /* Align with nav link left margin */
+  background-color: #0b2d1f;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(224, 196, 122, 0.3);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.main-nav .dropdown-menu li {
+  width: 100%;
+}
+
+.main-nav .dropdown-menu a {
+  display: block;
+  margin-left: 0 !important;
+  padding: 0.6rem 1.2rem;
+  color: #E0C47A;
+  white-space: nowrap;
+  border-bottom: none !important;
+}
+
+.main-nav .dropdown-menu a:hover {
+  background-color: rgba(224, 196, 122, 0.1);
+  color: #ffffff;
+  border-bottom: none !important;
+}
+
+/* Show Dropdown on Hover */
+.main-nav .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* Homepage-Only Dissolving Header over Video */
@@ -67,7 +131,7 @@ body.home-page header {
 .hero {
   position: relative;
   min-height: 600px;
-  padding: 220px 0 120px; /* Extra top padding so headline doesn't touch logo */
+  padding: 220px 0 120px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,20 +139,7 @@ body.home-page header {
   text-align: center;
 }
 
-
-  
 /* Video Hero Banner */
-.hero {
-  position: relative;
-  min-height: 500px;
-  padding: 120px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  text-align: center;
-}
-
 .hero-video {
   position: absolute;
   top: 50%;
@@ -108,7 +159,7 @@ body.home-page header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45); /* Dark tint overlay */
+  background: rgba(0, 0, 0, 0.45); 
   z-index: 2;
 }
 
@@ -136,14 +187,12 @@ body.home-page header {
 }
 
 /* Page Header Section (Subpages) */
-/* Update background and text color for the page-head section */
 .page-head {
   background-color: #123a2b;
-  color: #ffffff; /* Makes text white for high contrast */
-  padding: 40px 0; /* Optional: adds top/bottom padding if needed */
+  color: #ffffff; 
+  padding: 40px 0; 
 }
 
-/* Ensure headings and paragraphs inside page-head turn white */
 .page-head h1,
 .page-head p {
   color: #ffffff;
@@ -227,8 +276,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .rooted-grid strong{display:block;font-size:19px;color:#fff;margin-bottom:6px}
 .rooted-grid .d{color:#D9D2BF;font-size:15.5px}
 
-
-
 /* ==========================================
    MOBILE & TABLET RESPONSIVE STYLES
    ========================================== */
@@ -241,39 +288,52 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   }
 
   header .wrap {
-    flex-direction: column; /* Stack logo and navigation vertically on small screens */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     gap: 10px;
   }
 
-  /* Shrink logo so it doesn't take up the whole phone screen */
   .logo-img {
     height: 48px !important; 
   }
 
   /* Center nav links and give them better touch targets */
-  nav {
+  nav, .main-nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px 16px; /* Spacing between links */
+    gap: 8px 12px; 
   }
 
-  nav a {
-    margin-left: 0 !important; /* Reset desktop left margin */
+  nav a, .main-nav a {
+    margin-left: 0 !important; 
     font-size: 14px !important;
     padding: 4px 8px;
+  }
+
+  /* Adjust dropdown positioning for mobile view */
+  .main-nav .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.15);
+    margin-top: 4px;
+    display: none; 
+  }
+
+  .main-nav .dropdown:hover .dropdown-menu {
+    display: flex;
   }
 
   /* 2. Hero Section Fixes for Mobile Video */
   .hero {
     min-height: 480px !important;
-    padding: 150px 16px 60px !important; /* Extra top padding so logo/nav doesn't cover text */
+    padding: 150px 16px 60px !important; 
   }
 
   .hero-content h1 {
-    font-size: 28px !important; /* Smaller title to prevent awkward text wrapping */
+    font-size: 28px !important; 
     line-height: 1.25;
   }
 
@@ -282,7 +342,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     margin-bottom: 20px;
   }
 
-  /* Stack Hero Buttons on Mobile */
   .hero-content .btn {
     display: block;
     width: 100%;
@@ -292,7 +351,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
   /* 3. Subpage Headings Padding Fix */
   .page-head {
-    padding: 150px 16px 36px !important; /* Prevents sticky header from overlapping page titles */
+    padding: 150px 16px 36px !important; 
     text-align: center;
   }
 
@@ -302,12 +361,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
   /* 4. Product Grid & Section Columns */
   .grid, .cols, .rooted-grid {
-    grid-template-columns: 1fr !important; /* Display items in a single full-width column */
+    grid-template-columns: 1fr !important; 
     gap: 20px !important;
   }
 
   section {
-    padding: 40px 16px !important; /* Reduce large section padding on small displays */
+    padding: 40px 16px !important; 
   }
 
   /* 5. Mobile Footer Styling */
