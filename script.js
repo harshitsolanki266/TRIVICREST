@@ -24,7 +24,7 @@ var P = [
   ["Nutmeg", "Whole", "Warm, nutty seed with a distinct sweet aroma.", "images/nutmeg.png"],
   ["Mace", "Whole", "Delicate, lace-like aril with a subtle nutmeg flavor.", "images/mace.png"],
   ["All-Spice", "Whole", "Combines notes of cinnamon, nutmeg, and clove.", "images/allspice.png"],
-  ["Tamarind", "Whole", "Tangy, sour pulp essential for chutneys and sambar.", "images/tamarind.png"],
+  ["Tamarind", "Whole", "Tangy, sour pulp essential for chutneys and sambar.", "images/Tamarind.png"],
 
   // --- Seeds & Aromatics ---
   ["Fennel", "Seeds", "Sweet, liquorice-like flavor for digestion and cooking.", "images/fennel.png"],
