@@ -42,13 +42,13 @@ var P = [
   ["Rosemary", "Herbs", "Pine-like, woody aromatic herb.", "images/rosemary.png"],
   ["Sage", "Herbs", "Earthy, savory herb with subtle pepper notes.", "images/sage.png"],
   ["Thyme", "Herbs", "Earthy, subtle clove-like herbal taste.", "images/thyme.png"],
-  ["Oregano", "Herbs", "Pungent, warm herb for sauces and seasoning.", "images/oregano.jpg"],
+  ["Oregano", "Herbs", "Pungent, warm herb for sauces and seasoning.", "images/oregano.png"],
 
   // --- Roots, Rhizomes & Specialty ---
-  ["Kokam (Kokum)", "Specialty", "Tangy, sour dried fruit rind for cooling drinks and curries.", "images/kokum.jpg"],
-  ["Pomegranate Seed", "Specialty", "Tangy, fruity dried seeds (Anardana) for chaats.", "images/pomegranate_seed.jpg"],
-  ["Vanilla", "Specialty", "Rich, sweet aroma for desserts and baking.", "images/vanilla.jpg"],
-  ["Saffron", "Specialty", "Exquisite, floral spice for rich rice dishes and sweets.", "images/saffron.jpg"]
+  ["Kokam (Kokum)", "Specialty", "Tangy, sour dried fruit rind for cooling drinks and curries.", "images/kokum.png"],
+  ["Pomegranate Seed", "Specialty", "Tangy, fruity dried seeds (Anardana) for chaats.", "images/pomegranate_seed.png"],
+  ["Vanilla", "Specialty", "Rich, sweet aroma for desserts and baking.", "images/vanilla.png"],
+  ["Saffron", "Specialty", "Exquisite, floral spice for rich rice dishes and sweets.", "images/saffron.png"]
 ];
 
 // Highlight current page navigation link
