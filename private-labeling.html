@@ -9,11 +9,18 @@
 </head>
 <body>
 <header>
-  <div class="wrap">
-    <a class="logo" href="index.html">
-      <img src="images/trivilogo.png" alt="Trivicrest International LLP" class="logo-img">
+    <div class="wrap">
+      <a class="logo" href="index.html">
+        <img src="images/trivilogo.png" alt="Trivicrest International LLP" class="logo-img">
       </a>
-    <nav class="main-nav">
+
+      <button class="burger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav nav-menu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Products</a></li>
@@ -22,8 +29,8 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-  </div>
-</header>
+    </div>
+  </header>
 
 <main>
   <div class="page-head">
@@ -113,41 +120,38 @@
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>&copy; <span class="yr"></span> Trivicrest International LLP. All rights reserved. | <a href="mailto:info@trivicrest.com">info@trivicrest.com</a></span>
-    <span>
-      <a href="products.html">Products</a>
-      <a href="private-labeling.html">Private Labeling</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </span>
-  </div>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+    <div class="wrap">
+      <span>&copy; <span class="yr"></span> Trivicrest International LLP. All rights reserved. | <a href="mailto:info@trivicrest.com">info@trivicrest.com</a></span>
+      <span>
+        <a href="products.html">Products</a>
+        <a href="private-labeling.html">Private Labeling</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </span>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
-<script>
-// Uses the PHONE number set at the top of script.js
-document.getElementById("pl-send").onclick = function () {
-    var v = function (id) { 
-      var el = document.getElementById(id);
-      return (el && el.value.trim()) ? el.value.trim() : "-"; 
+  <script src="script.js"></script>
+  <script>
+    // Uses the PHONE number set at the top of script.js
+    document.getElementById("pl-send").onclick = function () {
+      var v = function (id) {
+        var el = document.getElementById(id);
+        return (el && el.value.trim()) ? el.value.trim() : "-";
+      };
+
+      var m = "Hello, I am interested in private labeling.\n" +
+              "Company: " + v("company") + "\n" +
+              "Country: " + v("country") + "\n" +
+              "Email: " + v("email") + "\n" +
+              "Brand: " + v("pl-brand") + "\n" +
+              "Spices: " + v("pl-spices") + "\n" +
+              "Pack size and quantity: " + v("pl-pack") + "\n" +
+              "Note: " + v("pl-note");
+
+      var phoneNum = (typeof PHONE !== "undefined" && /^\d{10,15}$/.test(PHONE)) ? PHONE : "";
+      window.open("https://wa.me/" + phoneNum + "?text=" + encodeURIComponent(m), "_blank", "noopener");
     };
-
-    var m = "Hello, I am interested in private labeling.\n" +
-            "Company: " + v("company") + "\n" +
-            "Country: " + v("country") + "\n" +
-            "Email: " + v("email") + "\n" +
-            "Brand: " + v("pl-brand") + "\n" +
-            "Spices: " + v("pl-spices") + "\n" +
-            "Pack size and quantity: " + v("pl-pack") + "\n" +
-            "Note: " + v("pl-note");
-
-    var phoneNum = (typeof PHONE !== "undefined" && /^\d{10,15}$/.test(PHONE)) ? PHONE : "";
-    window.open("https://wa.me/" + phoneNum + "?text=" + encodeURIComponent(m), "_blank", "noopener");
-  };
-</script>
+  </script>
 </body>
 </html>
